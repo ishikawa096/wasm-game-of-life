@@ -5,6 +5,7 @@ WORKDIR /usr/src/app
 RUN apt-get update && apt-get install -y --no-install-recommends \
   npm \
   && curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+  && rustup component add rustfmt
 
 COPY . .
 
